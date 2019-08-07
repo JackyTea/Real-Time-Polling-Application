@@ -1,0 +1,106 @@
+<!--
+    Real Time Polling Application
+    styles.css
+    Jacky Tea
+    19/07/19
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Real Time Polling App</title>
+    <link rel="icon" href="./assets/img/bar_graph_icon.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="head" class="container">
+        <div class="head-content">
+            <h1 id="vote-counter">Votes: 0</h1>
+        </div>
+        <div class="head-content">
+            <a href="https://github.com/JackyTea/Real-Time-Polling-Application">
+            <svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2350 2314.8"
+                xml:space="preserve" width="40"
+                height="40">
+                <path d="M1175,0C525.8,0,0,525.8,0,1175c0,552.2,378.9,1010.5,890.1,1139.7c-5.9-14.7-8.8-35.3-8.8-55.8v-199.8H734.4
+               c-79.3,0-152.8-35.2-185.1-99.9c-38.2-70.5-44.1-179.2-141-246.8c-29.4-23.5-5.9-47,26.4-44.1c61.7,17.6,111.6,58.8,158.6,120.4
+               c47,61.7,67.6,76.4,155.7,76.4c41.1,0,105.7-2.9,164.5-11.8c32.3-82.3,88.1-155.7,155.7-190.9c-393.6-47-581.6-240.9-581.6-505.3
+               c0-114.6,49.9-223.3,132.2-317.3c-26.4-91.1-61.7-279.1,11.8-352.5c176.3,0,282,114.6,308.4,143.9c88.1-29.4,185.1-47,284.9-47
+               c102.8,0,196.8,17.6,284.9,47c26.4-29.4,132.2-143.9,308.4-143.9c70.5,70.5,38.2,261.4,8.8,352.5c82.3,91.1,129.3,202.7,129.3,317.3
+               c0,264.4-185.1,458.3-575.7,499.4c108.7,55.8,185.1,214.4,185.1,331.9V2256c0,8.8-2.9,17.6-2.9,26.4
+               C2021,2123.8,2350,1689.1,2350,1175C2350,525.8,1824.2,0,1175,0L1175,0z" />
+            </svg>
+            </a>
+        </div>
+    </div>
+    <div id="vote" class="container">
+        <div id="form">
+            <div class="form-option" onclick="setSelectionValue('React')">
+                <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3618.6 3618.6" width="200"
+                    height="200">
+                    <style>
+                        .st0 {
+                            fill: #222
+                        }
+
+                        .st1 {
+                            fill: #00d8ff
+                        }
+
+                        .st2 {
+                            fill: none;
+                            stroke: #00d8ff;
+                            stroke-width: 144.7456;
+                            stroke-miterlimit: 10
+                        }
+                    </style>
+                    <path class="st0" d="M0 0h3618.6v3618.6H0z" />
+                    <circle class="st1" cx="1806.5" cy="1807.1" r="302.6" />
+                    <path class="st2"
+                        d="M1806.5 1191.9c406.2 0 783.6 58.3 1068.1 156.2 342.8 118 553.6 296.9 553.6 458.9 0 168.8-223.4 358.9-591.5 480.8-278.3 92.2-644.6 140.4-1030.2 140.4-395.4 0-769.7-45.2-1051.2-141.4-356.1-121.7-570.6-314.2-570.6-479.8 0-160.7 201.3-338.2 539.3-456 285.6-99.5 672.3-159.1 1082.5-159.1z" />
+                    <path class="st2"
+                        d="M1271 1501.3c202.9-351.9 442-649.7 669-847.2 273.5-238 533.8-331.2 674.1-250.3 146.2 84.3 199.3 372.8 121 752.7-59.2 287.2-200.4 628.5-393.1 962.6-197.5 342.5-423.7 644.2-647.6 840-283.3 247.7-557.3 337.3-700.7 254.6-139.2-80.3-192.4-343.3-125.7-695 56.4-297.4 198-662.1 403-1017.4z" />
+                    <path class="st2"
+                        d="M1271.5 2119.8c-203.5-351.6-342.1-707.4-399.9-1002.7-69.6-355.8-20.4-627.9 119.8-709 146.1-84.6 422.5 13.5 712.5 271 219.3 194.7 444.4 487.5 637.6 821.3 198.1 342.2 346.6 688.8 404.3 980.5 73.1 369.2 13.9 651.3-129.4 734.2-139.1 80.5-393.5-4.7-664.9-238.2-229.2-197.3-474.5-502.1-680-857.1z" />
+                </svg>
+            </div>
+            <div class="form-option" onclick="setSelectionValue('Angular')">
+                <svg width="200" height="200" viewBox="0 0 256 272" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid">
+                    <path
+                        d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+                        fill="#E23237" />
+                    <path d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z" fill="#B52E31" />
+                    <path
+                        d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+                        fill="#FFF" /></svg>
+            </div>
+            <div class="form-option" onclick="setSelectionValue('VanillaJS')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 1052 1052">
+                    <path fill="#f0db4f" d="M0 0h1052v1052H0z" />
+                    <path
+                        d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z"
+                        fill="#323330" /></svg>
+            </div>
+        </div>
+    </div>
+    <div id="graph" class="container"></div>
+    <div id="foot" class="container">
+        <a href="https://github.com/JackyTea/"><h1>&copy; Jacky Tea, 2019</h1></a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.4.0/pusher.js"
+        integrity="sha256-UQyUHt9KuGIabOC06du8oXBYjM6MZuxWkAbXugBXQn0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.min.js"
+        integrity="sha256-GttF4tDDC6ptOpI7MFp8bTO4jzIJFlniieDMuXA3n5Y=" crossorigin="anonymous"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>
